@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package = "com.google.protobuf";
+option java_package = "com.lyyang.test.testgrpc.model";
 option java_outer_classname = "AnyProto";
 
 // The greeter service definition.
