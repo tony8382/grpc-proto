@@ -7,14 +7,23 @@ option java_outer_classname = "GreeterProto";
 service Greeter {
   // Sends a greeting
   rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc SayHelloAdmin (HelloRequest) returns (HelloReply) {}
+  rpc Authenticate (AuthRequest) returns (AuthReply) {}
 }
 
 // The request message containing the user's name.
 message HelloRequest {
   string name = 1;
 }
+message AuthRequest {
+  string username = 1;
+  string password = 2;
+}
 
 // The response message containing the greetings
 message HelloReply {
   string message = 1;
+}
+message AuthReply {
+  string token = 1;
 }
